@@ -1,4 +1,3 @@
-<!--http push test-->
 <!DOCTYPE html>
 <html>
 {% import "utils.nunj" as util %}
