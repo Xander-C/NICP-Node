@@ -29,7 +29,22 @@ module.exports = {
         length: {
             maximum: 100,
         },
-        type: "text",
+        inclusion: {
+            whitin: {
+                "machinery": "机械与控制",
+                "information": "信息技术",
+                "mathematical": "数理",
+                "life": "生命科学",
+                "energy": "能源化工",
+                "philosophy": "哲学",
+                "information": "经济",
+                "mathematical": "社会",
+                "life": "法律",
+                "energy": "教育",
+                "energy": "管理",
+            },
+        },
+        type: "select",
     },
     isSTITP: {
         title: "是否STITP",
