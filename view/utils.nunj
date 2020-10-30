@@ -212,7 +212,6 @@
                             </div>
                         </div>
                     {% endif %}
-
                     {% if field.type=="date" %}
                         <div class="form-group">
                             <label class="col-sm-4 control-label">{{ field.title }}</label>
@@ -223,7 +222,6 @@
                             <!-- /.input group -->
                         </div>
                     {% endif %}
-
                     {% if field.type=="textarea" %}
                         <!-- textarea -->
                         <div class="form-group">
@@ -272,7 +270,27 @@
                                             <input type="radio" name="{{ id }}"
                                                    id="{{ field.title }}-{{ option }}"
                                                    value="{{ option }}"
-                                                    {{ "checked" if (data[id]==option||data[id]==value) }}>
+                                                    {{ "checked" if data[id]==option }}>
+                                            {{ value }}
+                                        </label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+
+                    {% if field.type=="radioValue" %}
+                        <!-- radio -->
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">{{ field.title }}</label>
+                            <div class="col-sm-5 ">
+                                {% for option,value in field.inclusion.within %}
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="{{ id }}"
+                                                   id="{{ field.title }}-{{ option }}"
+                                                   value="{{ value }}"
+                                                    {{ "checked" if data[id]==value }}>
                                             {{ value }}
                                         </label>
                                     </div>
@@ -282,14 +300,13 @@
                     {% endif %}
 
                     {% if field.type=="select" %}
-                        {#TODO:实现 select#}
                         <!-- select -->
                         <div class="form-group">
                             <label class="col-sm-4 control-label">{{ field.title }}</label>
-                            <div class="col-sm-5 ">
+                            <div class="col-sm-5">
                                 <select class="form-control">
                                     {% for option,value in field.inclusion.within %}
-                                        <option>{{ value }}</option>
+                                        <option value="{{ value }}" {{ "selected" if data[id]==value }}>{{ value }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
