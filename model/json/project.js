@@ -44,7 +44,7 @@ module.exports = {
                 "energy": "管理",
             },
         },
-        type: "select",
+        type: "radio",
     },
     isSTITP: {
         title: "是否STITP",

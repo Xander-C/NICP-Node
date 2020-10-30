@@ -272,7 +272,7 @@
                                             <input type="radio" name="{{ id }}"
                                                    id="{{ field.title }}-{{ option }}"
                                                    value="{{ option }}"
-                                                    {{ "checked" if data[id]==option }}>
+                                                    {{ "checked" if (data[id]==option||data[id]==value) }}>
                                             {{ value }}
                                         </label>
                                     </div>
