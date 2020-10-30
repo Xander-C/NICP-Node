@@ -285,12 +285,14 @@
                         {#TODO:实现 select#}
                         <!-- select -->
                         <div class="form-group">
-                            <label>{{ field.title }}</label>
-                            <select class="form-control">
-                                {% for option,value in field.inclusion.within %}
-                                    <option>{{ value }}</option>
-                                {% endfor %}
-                            </select>
+                            <label class="col-sm-4 control-label">{{ field.title }}</label>
+                            <div class="col-sm-5 ">
+                                <select class="form-control">
+                                    {% for option,value in field.inclusion.within %}
+                                        <option>{{ value }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
                         </div>
                     {% endif %}
                 {% endfor %}

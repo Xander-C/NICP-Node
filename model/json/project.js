@@ -30,7 +30,7 @@ module.exports = {
             maximum: 100,
         },
         inclusion: {
-            whitin: {
+            within: {
                 "machinery": "机械与控制",
                 "information": "信息技术",
                 "mathematical": "数理",
