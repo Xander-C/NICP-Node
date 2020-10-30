@@ -26,9 +26,6 @@ module.exports = {
     subject_category: {
         title: "学科类别",
         presence: true,
-        length: {
-            maximum: 100,
-        },
         inclusion: {
             within: {
                 "machinery": "机械与控制",
