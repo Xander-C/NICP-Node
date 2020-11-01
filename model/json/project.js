@@ -25,6 +25,7 @@ module.exports = {
     },
     subject_category: {
         title: "学科类别",
+        name: "subject_category",
         presence: true,
         inclusion: {
             within: {
