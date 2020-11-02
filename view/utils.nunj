@@ -304,7 +304,7 @@
                         <div class="form-group">
                             <label class="col-sm-4 control-label">{{ field.title }}</label>
                             <div class="col-sm-5">
-                                <select name="{{ field.name }}" class="form-control">
+                                <select name="subject_category" class="form-control">
                                     {% for option,value in field.inclusion.within %}
                                         <option value="{{ value }}" {{ "selected" if data[id]==value }}>{{ value }}</option>
                                     {% endfor %}

@@ -25,7 +25,6 @@ module.exports = {
     },
     subject_category: {
         title: "学科类别",
-        name: "subject_category",
         presence: true,
         inclusion: {
             within: {
@@ -42,7 +41,7 @@ module.exports = {
                 "11": "管理",
             },
         },
-        type: "select",
+        type: "radioValue",
     },
     isSTITP: {
         title: "是否STITP",
